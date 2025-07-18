@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "it_management"
+dynamic = ["version"]
+description = "Management von IT-Bausteinen. Hierzu gehören IT-Geräte und IT-Lösungen wie Server, Rechner, Netzwerke und E-Mailserver sowie auch Backups, Dienstleistungsverträge, Accounts und Internetleistungen."
+authors = [
+    {email = "info@tueit.de"}
+]
+dependencies = [
+    "frappe"
+]
+requires-python = ">=3.8"
+
+[tool.setuptools]
+packages = ["it_management"]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "it_management.__version__"}
